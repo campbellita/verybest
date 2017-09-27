@@ -69,6 +69,15 @@
       <!-- Label and input for neighborhood_id -->
       <input type="hidden" name="neighborhood_id" value="<%= @neighborhood.id %>">
 
+      <!-- Label and input for address -->
+      <div class="form-group">
+        <label for="address" class="control-label">
+          Address
+        </label>
+
+        <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="">
+      </div>
+
       <button class="btn btn-block btn-success">
         Create Venue
       </button>

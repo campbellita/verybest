@@ -75,7 +75,7 @@
           User
         </label>
 
-        <%= select_tag(:user_id, options_from_collection_for_select(User.all, :id, :email), :class => "form-control") %>
+        <%= select_tag(:user_id, options_from_collection_for_select(User.all, :id, :created_at), :class => "form-control") %>
       </div>
 
       <!-- Label and input for venue_id -->
@@ -157,7 +157,7 @@
       <% @dish.users.each do |user| %>
         <li class="list-group-item">
           <a href="/users/<%= user.id %>">
-            <%= user.email %>
+            <%= user.created_at %>
           </a>
           <div class="btn-group btn-group-xs pull-right">
             <a href="/users/<%= user.id %>" class="btn btn-primary">

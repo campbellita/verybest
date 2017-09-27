@@ -22,7 +22,6 @@ class UsersController < ApplicationController
   def create
     @user = User.new
 
-    @user.email = params[:email]
     @user.username = params[:username]
     @user.password = params[:password]
 
@@ -51,7 +50,6 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
 
-    @user.email = params[:email]
     @user.username = params[:username]
     @user.password = params[:password]
 
